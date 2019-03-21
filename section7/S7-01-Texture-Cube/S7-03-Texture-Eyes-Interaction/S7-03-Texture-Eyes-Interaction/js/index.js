@@ -33,7 +33,9 @@ function init() {
 		map: THREE.ImageUtils.loadTexture('images/eye.png'),
 	});
 
-  var geometry = new THREE.SphereGeometry( 30, 32, 16 );
+	var geometry = new THREE.SphereGeometry( 30, 32, 16 );
+
+
   // modify UVs to accommodate MatCap texture
 	var faceVertexUvs = geometry.faceVertexUvs[ 0 ];
 	for ( i = 0; i < faceVertexUvs.length; i ++ ) {
@@ -43,11 +45,13 @@ function init() {
 			uvs[ j ].x = face.vertexNormals[ j ].x * 0.5 + 0.5;
 			uvs[ j ].y = face.vertexNormals[ j ].y * 0.5 + 0.5;
 		}
-	}
+	};
+
 
 
 
   mesh = new THREE.Mesh( geometry, material );
+
 	scene.add( mesh );
 
 	renderer = new THREE.WebGLRenderer();
@@ -66,8 +70,8 @@ function animate() {
 
 function render() {
 	console.log(window.innerHeight)
-	mesh.rotation.x = mouseY / window.innerHeight*2;
-	mesh.rotation.y = mouseX / window.innerWidth*2;
+	mesh.rotation.x = mouseY/window.innerHeight*2;
+	mesh.rotation.y = mouseX/window.innerWidth*2;
 
 	renderer.render( scene, camera );
 }
