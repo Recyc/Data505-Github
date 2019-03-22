@@ -11,7 +11,6 @@ init();
 animate();
 
 function init() {
-
   container = document.createElement( 'div' );
   document.body.appendChild( container );
 
@@ -23,8 +22,6 @@ function init() {
   var light = new THREE.DirectionalLight( 0xffffff, 1 );
   light.position.set( 1, 1, 1 ).normalize();
   scene.add( light );
-
-
 
   var geometry = new THREE.BoxBufferGeometry( 20, 20, 20 );
 
@@ -46,7 +43,6 @@ function init() {
   					node.receiveShadow = true;
   				}
   			});
-
         var sizeRand = Math.random() * 0.5;
         mesh.scale.set(sizeRand,sizeRand,sizeRand);
         mesh.position.set(Math.random()*800-400, Math.random()*800-400, Math.random()*800-400);
@@ -58,8 +54,6 @@ function init() {
   	});
   }
 
-
-
   raycaster = new THREE.Raycaster();
 
   renderer = new THREE.WebGLRenderer();
@@ -67,12 +61,11 @@ function init() {
   renderer.setSize( window.innerWidth, window.innerHeight );
   container.appendChild( renderer.domElement );
 
-  controls = new THREE.OrbitControls(camera, renderer.domElement);
+  var controls = new THREE.OrbitControls(camera, renderer.domElement);
   //stats = new Stats();
   //container.appendChild( stats.dom );
   document.addEventListener( 'mousemove', onDocumentMouseMove, false );
   window.addEventListener( 'resize', onWindowResize, false );
-  controls = new THREE.OrbitControls(camera, renderer.domElement);
 }
 
 function onWindowResize() {
@@ -85,9 +78,6 @@ function onDocumentMouseMove( event ) {
   event.preventDefault();
   mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
   mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-
-
-
 }
 
 //
