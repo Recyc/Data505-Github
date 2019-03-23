@@ -81,7 +81,7 @@ function onDocumentMouseDown( event ) {
     } )[ 0 ];
     if ( res && res.object ) {
       selectedObject = res.object;
-      selectedObject.material.color.set( '#f00' );
+      selectedObject.material.color.set( Math.random()*0xffffff );
       console.log(selectedObject.position);
     }
   }

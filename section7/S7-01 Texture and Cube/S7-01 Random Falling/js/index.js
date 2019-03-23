@@ -64,18 +64,9 @@ function animate() {
 	for (let i = 0; i < cubesNum; i++){
 		let randomValue = Math.random()*0.5;
 		speed.push(randomValue);
-	};
-
-
-
-
-	if (cubes[i].position.y <- 30){
-		cubes[i].position.y = 35;
-		cubes[i].position.x = (Math.random() * -20) +10;
-		cubes[i].position.x = (Math.random() * -20) +10;
-		cubes[i].scale.x = (Math.random() * -20) +10;
-		cubes[i].scale.x = (Math.random() * -20) +10;
 	}
+
+
 
 
 
