@@ -130,7 +130,7 @@ function render() {
     else eyes[4].rotation.y = map_range(mouseX, 590 , window.innerWidth, -0.69 , 0.2);
     if (mouseY<35) eyes[4].rotation.x = map_range(mouseY, 0, 35, 0, 0.25);
     else eyes[4].rotation.x = map_range(mouseY, 35, window.innerHeight, 0.25, 1.14);
-//左上角
+//左下角
 		if (mouseX < 590) eyes[2].rotation.y = map_range(mouseX, 0, 590, -1.14, -0.69);
 		else eyes[2].rotation.y = map_range(mouseX, 590, window.innerWidth, -0.69, 0.2);
 		if (mouseY < 810) eyes[2].rotation.x = map_range(mouseY, 0, 810, -1.14, -0.25);
