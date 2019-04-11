@@ -1,92 +1,55 @@
-//Global variables
-var scene, camera, renderer;
-var geometry, material, mesh;
-var gui;
-var color;
+## S3-01 ##
+This project is to practise creating GUI. The homework is aim to make a creative work.
 
-var de2ra = function(degree) {
-  return degree*(Math.PI/180);
-};
+#### Description of the Creative design ####
+My idea is to from an eye socket by combining geometric objects of different materials.Then create a controllable sphere in the eye socket to be the eye.
 
-
-
-function init(){
+#### Usage ####
+```javascript
+var  texture = new THREE.TextureLoader().load('texture/P5.png');
+var  material2 = new THREE.MeshBasicMaterial({map: texture});
 
 
-  // Create an empty scene --------------------------
-  scene = new THREE.Scene();
-
-  // Create a basic perspective camera --------------
-  camera = new THREE.PerspectiveCamera(35, window.innerWidth/window.innerHeight, 300, 10000 );
-
-  // Create a renderer with Antialiasing ------------
-  renderer = new THREE.WebGLRenderer({antialias:true});
-
-  // Configure renderer clear color
-  renderer.setClearColor("#000000");
-
-  // Configure renderer size
-  renderer.setSize( window.innerWidth, window.innerHeight );
-
-  // Append Renderer to DOM
-  document.body.appendChild( renderer.domElement );
-
-
-
-  // Add mesh to scene
-  scene.add( mesh );
-}
-
-
-
-function geometry(){
-//背景
-
-
-  var  texture = new THREE.TextureLoader().load('texture/P5.png');
-  var  material2 = new THREE.MeshBasicMaterial({map: texture});
-
-
-  // Create a Cube Mesh with basic material ---------
+// Create a Cube Mesh with basic material ---------
 
 
 //圆环1 中
-  geometry = new THREE.RingGeometry( 90, 100, 32 );
-  material = new THREE.MeshBasicMaterial( { color: 0xbebebe, side: THREE.DoubleSide } );
-  mesh2 = new THREE.Mesh( geometry, material );
-  mesh2.position.z = -1000;
-  mesh2.position.y = 0;
-  mesh2.position.y = 0;
+geometry = new THREE.RingGeometry( 90, 100, 32 );
+material = new THREE.MeshBasicMaterial( { color: 0xbebebe, side: THREE.DoubleSide } );
+mesh2 = new THREE.Mesh( geometry, material );
+mesh2.position.z = -1000;
+mesh2.position.y = 0;
+mesh2.position.y = 0;
 
 
 
 //圆环2 大
-  geometry = new THREE.RingGeometry( 190, 300, 32 );
-  var  texture = new THREE.TextureLoader().load('texture/dian.jpg');
-  var  material = new THREE.MeshBasicMaterial({map: texture});
-  mesh3 = new THREE.Mesh( geometry, material );
-  mesh3.position.z = -1100;
-  mesh3.position.y = 0;
-  mesh3.position.y = 0;
+geometry = new THREE.RingGeometry( 190, 300, 32 );
+var  texture = new THREE.TextureLoader().load('texture/dian.jpg');
+var  material = new THREE.MeshBasicMaterial({map: texture});
+mesh3 = new THREE.Mesh( geometry, material );
+mesh3.position.z = -1100;
+mesh3.position.y = 0;
+mesh3.position.y = 0;
 
 //圆环3
- geometry = new THREE.RingGeometry( 180, 400, 32 );
- texture = new THREE.TextureLoader().load('texture/xuanwo.jpg');
- material = new THREE.MeshBasicMaterial({map: texture});
- mesh4 = new THREE.Mesh( geometry, material );
- mesh4.position.z = -1200;
- mesh4.position.y = 0;
- mesh4.position.y = 0;
+geometry = new THREE.RingGeometry( 180, 400, 32 );
+texture = new THREE.TextureLoader().load('texture/xuanwo.jpg');
+material = new THREE.MeshBasicMaterial({map: texture});
+mesh4 = new THREE.Mesh( geometry, material );
+mesh4.position.z = -1200;
+mesh4.position.y = 0;
+mesh4.position.y = 0;
 
 
 //圆环4
- geometry = new THREE.RingGeometry( 30, 100, 32 );
- var  texture = new THREE.TextureLoader().load('texture/bao.jpg');
- var  material = new THREE.MeshBasicMaterial({map: texture});
- mesh5 = new THREE.Mesh( geometry, material );
- mesh5.position.z = -1300;
- mesh5.position.y = 0;
- mesh5.position.y = 0;
+geometry = new THREE.RingGeometry( 30, 100, 32 );
+var  texture = new THREE.TextureLoader().load('texture/bao.jpg');
+var  material = new THREE.MeshBasicMaterial({map: texture});
+mesh5 = new THREE.Mesh( geometry, material );
+mesh5.position.z = -1300;
+mesh5.position.y = 0;
+mesh5.position.y = 0;
 
 
 var  texture = new THREE.TextureLoader().load('texture/P5.png');
@@ -261,92 +224,47 @@ mesh22.position.y = 0;
 mesh22.position.y = 0;
 
 
-
-
 geometry = new THREE.PlaneGeometry( 5, 20, 32 );
 material = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
 plane = new THREE.Mesh( geometry, material );
 scene.add( plane )
 
+```
 
+* At that time,I haven't know the usage of the clone or Arrary.So I try to define each objects' position.
+The way to create an object is similiar to what we did in S2.In my understanding,the most important thing to create an object is "mesh = geomeetry + material",then,
+scene.add(the object) just as important.
 
-//三角形遮罩
-/*var geometry = new THREE.ConeGeometry( 83, 40, 2 );
-var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-{var cone = new THREE.Mesh( geometry, material )};
-cone.position.z = -1000;
-cone.position.x =-0;
-cone.position.y =-60;
-
-cone.rotation.y =de2ra(controller.rotationy = 90);
-cone.rotation.z =de2ra(controller.rotationz = 0);
-cone.rotation.x =de2ra(controller.rotationx = 180);*/
-
-
-
-
-//左
-  scene.add(mesh);
-//左上的
-
-//右边的
-  scene.add(mesh9);
-
-  scene.add(mesh10);
-
-  scene.add(mesh11);
-
-  scene.add(mesh12);
-
-  scene.add(mesh13);
-
-  scene.add(mesh14);
-
-  scene.add(mesh15);
-
-  scene.add(mesh16);
-
-  scene.add(mesh17);
-
-  scene.add(mesh18);
-
-  scene.add(mesh19);
-
-  scene.add(mesh20);
-
-  scene.add( plane )
-  /*
-  scene.add( cone );*/
-
-  //背景环
-  scene.add( mesh2 );
-  scene.add( mesh3 );
-  scene.add( mesh4 );
-  scene.add( mesh5 );
-  //背景旋转
-  scene.add(mesh21);
-  scene.add(mesh22);
-
-  //中心圆
-  scene.add( mesh6 );
-
-}
-  //中心
-
-  var controller = new function(){
-    this.scalex = 1;
-    this.scaley = 1;
-    this.scalez = 1;
-    this.rotationx = 0.;
-    this.rotationy = 0.;
-    this.rotationz = 0.;
-    this.positionx = 0;
-    this.positiony = 0;
-
-
-  }
-
-
+```javascript
+var gui = new dat.GUI();
+var f0 = gui.addFolder('Cube1');
+ var f1 = gui.addFolder('Scale');
+     f1.add(controller,'scalex',0.1, 5).onChange(function() {
+       mesh6.scale.x = (controller.scalex)
+     });
+     f1.add(controller,'scaley',0.1, 5).onChange(function() {
+       mesh6.scale.y = (controller.scaley)
+     });
+     f1.add(controller,'scalez',0.1, 5).onChange(function() {
+         mesh6.scale.z = (controller.scalez)
+       });
+var f2 = gui.addFolder('Position');
+f2.add(controller,'positionx',-400, 400).onChange(function() {
+ mesh6.position.x = (controller.positionx)
+});
+f2.add(controller,'positiony',-400, 400).onChange(function() {
+ mesh6.position.y = (controller.positiony)
+});
+var f3 = gui.addFolder('Rotation');
+f3.add(controller,'rotationx',-180, 180).onChange(function() {
+ mesh6.rotation.x =  de2ra(controller.rotationx)
+});
+f3.add(controller,'rotationy',-180, 180).onChange(function() {
+ mesh6.rotation.y =  de2ra(controller.rotationy)
+});
+f3.add(controller,'rotationz',-180, 180).onChange(function() {
+ mesh6.rotation.z = de2ra(controller.rotationz)
+ });
 
  var gui = new dat.GUI();
 var f0 = gui.addFolder('Cube1');
@@ -354,182 +272,32 @@ var f0 = gui.addFolder('Cube1');
       f1.add(controller,'scalex',0.1, 5).onChange(function() {
         mesh6.scale.x = (controller.scalex)
       });
-
-
       f1.add(controller,'scaley',0.1, 5).onChange(function() {
         mesh6.scale.y = (controller.scaley)
       });
-
-
       f1.add(controller,'scalez',0.1, 5).onChange(function() {
           mesh6.scale.z = (controller.scalez)
         });
-
 
 var f2 = gui.addFolder('Position');
 f2.add(controller,'positionx',-400, 400).onChange(function() {
   mesh6.position.x = (controller.positionx)
 });
-
-
 f2.add(controller,'positiony',-400, 400).onChange(function() {
   mesh6.position.y = (controller.positiony)
 });
-
-
-
-
-
 
 var f3 = gui.addFolder('Rotation');
 f3.add(controller,'rotationx',-180, 180).onChange(function() {
   mesh6.rotation.x =  de2ra(controller.rotationx)
 });
-
-
 f3.add(controller,'rotationy',-180, 180).onChange(function() {
   mesh6.rotation.y =  de2ra(controller.rotationy)
 });
 
-
 f3.add(controller,'rotationz',-180, 180).onChange(function() {
   mesh6.rotation.z = de2ra(controller.rotationz)
   });
+```
 
-
-
-  var gui = new dat.GUI();
- var f0 = gui.addFolder('Cube1');
-   var f1 = gui.addFolder('Scale');
-       f1.add(controller,'scalex',0.1, 5).onChange(function() {
-         mesh6.scale.x = (controller.scalex)
-       });
-
-
-       f1.add(controller,'scaley',0.1, 5).onChange(function() {
-         mesh6.scale.y = (controller.scaley)
-       });
-
-
-       f1.add(controller,'scalez',0.1, 5).onChange(function() {
-           mesh6.scale.z = (controller.scalez)
-         });
-
-
- var f2 = gui.addFolder('Position');
- f2.add(controller,'positionx',-400, 400).onChange(function() {
-   mesh6.position.x = (controller.positionx)
- });
-
-
- f2.add(controller,'positiony',-400, 400).onChange(function() {
-   mesh6.position.y = (controller.positiony)
- });
-
-
-
-
-
-
- var f3 = gui.addFolder('Rotation');
- f3.add(controller,'rotationx',-180, 180).onChange(function() {
-   mesh6.rotation.x =  de2ra(controller.rotationx)
- });
-
-
- f3.add(controller,'rotationy',-180, 180).onChange(function() {
-   mesh6.rotation.y =  de2ra(controller.rotationy)
- });
-
-
- f3.add(controller,'rotationz',-180, 180).onChange(function() {
-   mesh6.rotation.z = de2ra(controller.rotationz)
-   });
-
-
-
-
-
-
-
-var rot
-// Render Loop
-var render = function () {
-  requestAnimationFrame( render );
-
-  rot = 0.01
-
-
-
-
-
-  mesh2.rotation.x += rot;
-  mesh2.rotation.y += rot;
-
-
-  mesh3.rotation.x += rot;
-  mesh3.rotation.y += rot;
-
-
-  mesh4.rotation.z +=  rot ;
-
-  mesh5.rotation.x += rot;
-  mesh5.rotation.y += rot;
-
-
-
-  mesh6.rotation.y +=  rot;
-
-  mesh21.rotation.z +=  rot*1.2;
-
-  mesh14.rotation.z -=  rot*1.2;
-  mesh14.rotation.x +=  rot*1.2;
-
-  renderer.setClearColor("#000000");
-
-
-  renderer.render(scene, camera);
-};
-
-function dec2hex(i) {
-  var result = "0x000000";
-  if (i >= 0 && i <= 15) { result = "0x00000" + i.toString(16); }
-  else if (i >= 16 && i <= 255) { result = "0x0000" + i.toString(16); }
-  else if (i >= 256 && i <= 4095) { result = "0x000" + i.toString(16); }
-  else if (i >= 4096 && i <= 65535) { result = "0x00" + i.toString(16); }
-  else if (i >= 65535 && i <= 1048575) { result = "0x0" + i.toString(16); }
-  else if (i >= 1048575 ) { result = '0x' + i.toString(16); }
-  if (result.length == 8){return result;}
-}
-
-function lightingSystem(){
-  var object3d  = new THREE.DirectionalLight('white', 0.15);
-  object3d.position.set(6,3,9);
-  object3d.name = 'Back light';
-  scene.add(object3d);
-
-  object3d = new THREE.DirectionalLight('white', 0.35);
-  object3d.position.set(-6, -3, 0);
-  object3d.name   = 'Key light';
-  scene.add(object3d);
-
-  object3d = new THREE.DirectionalLight('white', 0.55);
-  object3d.position.set(9, 9, 6);
-  object3d.name = 'Fill light';
-  scene.add(object3d);
-
-  var spotLight = new THREE.SpotLight( 0xffffff );
-  spotLight.position.set( 3, 30, 3 );
-  spotLight.castShadow = true;
-  spotLight.shadow.mapSize.width = 2048;
-  spotLight.shadow.mapSize.height = 2048;
-  spotLight.shadow.camera.near = 1;
-  spotLight.shadow.camera.far = 4000;
-  spotLight.shadow.camera.fov = 45;
-  scene.add( spotLight );
-}
-
-
-init();
-geometry();
-render();
+* This code is to create GUI as user interface.I create two GUI to control two different objects' position, rotation amd scale.
