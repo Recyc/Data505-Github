@@ -57,7 +57,7 @@ scene.add( helper );
   scene.add( mesh2 );
 
 
-  var light = new THREE.AmbientLight( 0x404040 ); // soft white light
+var light = new THREE.AmbientLight( 0x404040 ); // soft white light
 scene.add( light );
 
 var renderer = new THREE.WebGLRenderer();
