@@ -7,9 +7,9 @@ In class, we were asked to make a project in which only two different positions 
 #### Usage ####
 
 ```javascript
-for (var x = -10; x <= 10; x += 5) { }// Start from -45 and sequentially add one every 5 pixels
+for (var x = -10; x <= 10; x += 5) { }// Start from -10 and sequentially add one every 5 pixels
 for (var y = -10; y <= 10; y += 5){
-//for (var z = -40; z < 40; z += 5){
+
 }
 ```
 * These codes specify the range of values for x and y. Generated from the position of -10, one for every 5 units until the position of 10 is generated. A total of 25 cubes were generated, each with 5 columns each.

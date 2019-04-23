@@ -18,8 +18,14 @@ function init() {
   scene.add(spotLight);
   //spotLight.castShadow = true;
 
+  var ambLight = new THREE.AmbientLight(0xffffff);
+  ambLight.position.set(0, 1000, 0);
+  ambLight.add(spotLight);
+  scene.add(ambLight);
+
+
   renderer = new THREE.WebGLRenderer({antialias:true});
-  renderer.setClearColor(0x17293a);
+  renderer.setClearColor(0x00E3E3);
   renderer.setSize(W, H);
   //renderer.shadowMapEnabled = true;
 

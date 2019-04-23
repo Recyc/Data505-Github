@@ -301,3 +301,4 @@ f3.add(controller,'rotationz',-180, 180).onChange(function() {
 ```
 
 * This code is to create GUI as user interface.I create two GUI to control two different objects' position, rotation amd scale.
+* Each Fx.add can add a separate console to control an amount of object.
