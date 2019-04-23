@@ -358,4 +358,6 @@ mesh3.position.set(0, 0, 0 );
 mesh3.rotation.set(-100, 0, 0 );
 ```
  * Create a star ring.
- 
+
+### link ###
+ [link to the final work](https://github.com/Recyc/Data505-Github/tree/master/FINAL%20WORK-sound%20visualization%20galaxy)
