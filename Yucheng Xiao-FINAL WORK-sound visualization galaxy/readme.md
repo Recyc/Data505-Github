@@ -9,7 +9,7 @@ B161006094
 
 I want to make a galaxy that sounds visual. I use a ball that can change shape with music as the star of the entire galaxy, with two plans that can float with music as a nebula. Then, a star with a random rotation is placed around the star, and several star rings are created.
 
-![overall effect](ScreenShot/ScreenShot.png)
+![overall effect](https://github.com/Recyc/Data505-Github/blob/master/Yucheng%20Xiao-FINAL%20WORK-sound%20visualization%20galaxy/ScreenShot/screenshot.PNG)
 
 ![core](https://github.com/Recyc/Data505-Github/blob/master/Yucheng%20Xiao-FINAL%20WORK-sound%20visualization%20galaxy/ScreenShot/core.PNG)
 
