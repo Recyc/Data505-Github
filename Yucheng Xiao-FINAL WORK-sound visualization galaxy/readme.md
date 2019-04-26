@@ -1,14 +1,17 @@
 # FINAL WORK - music visualiation galaxy #
 
 I am very interested in the content of sound visualization. So I want to add sound visualizations to my final assignment, even though I don't teach them in the classroom. I found a plugin for Simplex-noise and created this project.
-
+#### student Name ####
+Yucheng Xiao
+#### Nua student ID  ####
+B161006094
 ### Description of work ###
 
 I want to make a galaxy that sounds visual. I use a ball that can change shape with music as the star of the entire galaxy, with two plans that can float with music as a nebula. Then, a star with a random rotation is placed around the star, and several star rings are created.
 
-![overall effect](Texture/jietu.png)
+![overall effect](ScreenShot/ScreenShot.png)
 
-![core](Texture/core.png)
+![core](Screenshot/core.png)
 
 ### Usage ###
 
