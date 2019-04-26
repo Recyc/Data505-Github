@@ -11,7 +11,7 @@ I want to make a galaxy that sounds visual. I use a ball that can change shape w
 
 ![overall effect](ScreenShot/ScreenShot.png)
 
-![core](Screenshot/core.png)
+![core](https://github.com/Recyc/Data505-Github/blob/master/Yucheng%20Xiao-FINAL%20WORK-sound%20visualization%20galaxy/ScreenShot/core.PNG)
 
 ### Usage ###
 
